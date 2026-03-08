@@ -10,7 +10,7 @@
 /* Floating Navbar Container */
 .floating-navbar {
   background-color: #111111; /* Dark background */
-  border-radius: 100px; /* Fully rounded pill shape */
+  border-radius: 10px; /* Fully rounded pill shape */
   gap: 4px; /* Space between navigation items */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   margin: 25px;
@@ -28,7 +28,7 @@
   justify-content: center;
   /* Removed gap; width and margin of the icon-wrapper will handle the spacing smoothly */
   padding: 8px 20px;
-  border-radius: 100px;
+  border-radius: 10px;
   border: none;
   background: transparent;
   color: #ffffff; /* Light grey text for inactive items */
