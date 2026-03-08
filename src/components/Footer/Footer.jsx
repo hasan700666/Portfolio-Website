@@ -3,16 +3,18 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div>
-            <div className="flex justify-between items-center m-10">
-                <div>Home</div>
-                <div>About</div>
-                <div>Skills</div>
-                <div>Education</div>
-                <div>Experience</div>
-                <div>Projects</div>
+        <div className='mt-30 h-72 overflow-hidden'>
+            <div className="flex justify-between items-center mx-90 ">
+                <a href="#home" className='hover:underline'>Home</a>
+                <a href="#about" className='hover:underline'>About</a>
+                <a href="#skills" className='hover:underline'>Skills</a>
+                <a href="#education" className='hover:underline'>Education</a>
+                <a href="#experience" className='hover:underline'>Experience</a>
+                <a href="#projects" className='hover:underline'>Projects</a>
             </div>
-            <div className='text-center text-white teg-line'>CRAFTING CLEAN CODE</div>
+            <div className=''>
+                <div className='text-center text-black teg-line'>CRAFTING CLEAN CODE</div>
+            </div>
         </div>
     );
 };
