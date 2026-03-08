@@ -1,24 +1,24 @@
-/* Base container for demonstration purposes, matching the yellow background in the image */
-body {
-  margin: 25px;
-  padding: 0;
-  background-color: #898989; /* Yellow textured background inspired by the image */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: start;
-  height: 100vh;
+  align-items: center;
 }
-
 /* Floating Navbar Container */
 .floating-navbar {
-  display: inline-flex;
-  align-items: center;
   background-color: #111111; /* Dark background */
-  padding: 6px; /* Inner spacing around the pill */
   border-radius: 100px; /* Fully rounded pill shape */
   gap: 4px; /* Space between navigation items */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  margin: 25px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
 }
 
 /* Individual Navigation Items */
@@ -31,9 +31,8 @@ body {
   border-radius: 100px;
   border: none;
   background: transparent;
-  color: #eeeeee; /* Light grey text for inactive items */
+  color: #ffffff; /* Light grey text for inactive items */
   font-size: 14px;
-  font-weight: 500;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -71,21 +70,11 @@ body {
 /* Icon Styling */
 .nav-icon {
   stroke-width: 1.8px;
-  min-width: 18px; /* Prevent svg collapse during transition */
+  min-width: 18px;
   transition: stroke 0.4s ease;
 }
 
-/* The icon stroke color matches the text color */
-.nav-item.active .nav-icon {
-  stroke: #111111;
-}
-
-.nav-item:not(.active) .nav-icon {
-  stroke: #eeeeee;
-}
 
 .nav-text {
-  /* Slightly adjust line height for perfect vertical centering */
   line-height: 1;
-  white-space: nowrap; /* Prevent text from wrapping during resize animations */
 }

@@ -99,7 +99,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="floating-navbar">
+    <div className="navbar">
+      <nav className="floating-navbar">
       {tabs.map((tab) => {
         const isActive = activeTab === tab.name;
 
@@ -123,6 +124,7 @@ const Navbar = () => {
         );
       })}
     </nav>
+    </div>
   );
 };
 

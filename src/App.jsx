@@ -11,7 +11,7 @@ import Skills from "./components/Skills/Skills";
 
 function App() {
   return (
-    <>
+    <div className="anton-regular">
       <Navbar></Navbar>
       <Home></Home>
       <About></About>
@@ -21,7 +21,7 @@ function App() {
       <Projects></Projects>
       <Contact></Contact>
       <Footer></Footer>
-    </>
+    </div>
   );
 }
 
