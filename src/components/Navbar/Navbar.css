@@ -1,0 +1,91 @@
+/* Base container for demonstration purposes, matching the yellow background in the image */
+body {
+  margin: 25px;
+  padding: 0;
+  background-color: #898989; /* Yellow textured background inspired by the image */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+}
+
+/* Floating Navbar Container */
+.floating-navbar {
+  display: inline-flex;
+  align-items: center;
+  background-color: #111111; /* Dark background */
+  padding: 6px; /* Inner spacing around the pill */
+  border-radius: 100px; /* Fully rounded pill shape */
+  gap: 4px; /* Space between navigation items */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Navigation Items */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Removed gap; width and margin of the icon-wrapper will handle the spacing smoothly */
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: #eeeeee; /* Light grey text for inactive items */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effect for inactive items */
+.nav-item:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Active Navigation Item */
+.nav-item.active {
+  background-color: #ffffff;
+  color: #111111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Container for smooth reveal */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-wrapper.show-icon {
+  width: 18px; /* Match icon's flex width or svg width */
+  opacity: 1;
+  margin-right: 6px; /* Space separating icon and text */
+}
+
+/* Icon Styling */
+.nav-icon {
+  stroke-width: 1.8px;
+  min-width: 18px; /* Prevent svg collapse during transition */
+  transition: stroke 0.4s ease;
+}
+
+/* The icon stroke color matches the text color */
+.nav-item.active .nav-icon {
+  stroke: #111111;
+}
+
+.nav-item:not(.active) .nav-icon {
+  stroke: #eeeeee;
+}
+
+.nav-text {
+  /* Slightly adjust line height for perfect vertical centering */
+  line-height: 1;
+  white-space: nowrap; /* Prevent text from wrapping during resize animations */
+}
