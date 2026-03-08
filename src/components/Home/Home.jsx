@@ -1,7 +1,9 @@
 import React from "react";
 import img from "../../assets/Adobe Express.png";
 import "./Home.css";
+import { RiFilePaper2Line } from "react-icons/ri";
 import { FaArrowDownLong } from "react-icons/fa6";
+import { FaGithub, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -24,7 +26,35 @@ const Home = () => {
         <div className="m-10 mt-70 text-2xl text-end">
           <div>Scroll Down</div>
           <div className="flex justify-end mt-3">
-            <FaArrowDownLong  />
+            <FaArrowDownLong />
+          </div>
+        </div>
+        <div className="box-start flex flex-col justify-center items-center gap-5">
+          <button className="home-button">
+            <span className="home-icon-wrapper">
+              <RiFilePaper2Line />
+            </span>
+            <span className="home-button-text">Download Resume</span>
+          </button>
+          <div className="social-buttons ml-3.5">
+            <button className="home-button">
+              <span className="home-icon-wrapper">
+                <FaGithub />
+              </span>
+              <span className="home-button-text">GitHub</span>
+            </button>
+            <button className="home-button">
+              <span className="home-icon-wrapper">
+                <FaWhatsapp />
+              </span>
+              <span className="home-button-text">WhatsApp</span>
+            </button>
+            <button className="home-button">
+              <span className="home-icon-wrapper">
+                <FaLinkedin />
+              </span>
+              <span className="home-button-text">LinkedIn</span>
+            </button>
           </div>
         </div>
       </div>

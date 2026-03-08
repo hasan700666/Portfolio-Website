@@ -2,7 +2,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 1000px; /* ← add this */
+  height: 800px; /* ← add this */
 }
 
 .tag-track {
@@ -44,4 +44,61 @@
 @keyframes scrollText {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+.box-start{
+  border-radius: 14px 14px 0px 0px;
+  background-color: black;
+  padding: 10px;
+  margin-top: 127px;
+  color: white;
+}
+
+/* Home button style (matches navbar appearance) */
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-button:hover {
+  background-color: #ffffff;
+  color: #111111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.home-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 0;
+}
+
+.home-button:hover .home-icon-wrapper {
+  width: 18px;
+  opacity: 1;
+  margin-right: 6px;
+}
+
+.home-button-text {
+  line-height: 1;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }

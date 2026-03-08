@@ -14,12 +14,14 @@ function App() {
     <div className="anton-regular">
       <Navbar></Navbar>
       <Home></Home>
-      <About></About>
-      <Skills></Skills>
-      <Education></Education>
-      <Experience></Experience>
-      <Projects></Projects>
-      <Contact></Contact>
+      <div className="bg-black">
+        <About></About>
+        <Skills></Skills>
+        <Education></Education>
+        <Experience></Experience>
+        <Projects></Projects>
+        <Contact></Contact>
+      </div>
       <Footer></Footer>
     </div>
   );

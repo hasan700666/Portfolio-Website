@@ -37,10 +37,11 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover effect for inactive items */
-.nav-item:not(.active):hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+/* Hover effect (treat hover as active-style) */
+.nav-item:hover {
+  background-color: #ffffff;
+  color: #111111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Active Navigation Item */
