@@ -14,7 +14,7 @@ const Home = () => {
         <span className="tag-line">FULL-STACK MERN DEVELOPER</span>
         <span className="tag-line">FULL-STACK MERN DEVELOPER</span>
       </div>
-      <div>
+      <div className="">
         <div className="m-10 mt-40 text-2xl">
           <div>A Web Developer</div>
           <div>MERN Stack</div>
@@ -29,6 +29,8 @@ const Home = () => {
             <FaArrowDownLong />
           </div>
         </div>
+      </div>
+      <div>
         <div className="box-start flex flex-col justify-center items-center gap-5">
           <button className="home-button">
             <span className="home-icon-wrapper">
