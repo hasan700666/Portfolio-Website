@@ -2,7 +2,7 @@ import React from 'react';
 
 const Experience = () => {
     return (
-        <div>
+        <div className='w-0 h-0'>
             
         </div>
     );

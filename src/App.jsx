@@ -16,8 +16,8 @@ function App() {
       <Home></Home>
       <div className="bg-black">
         <About></About>
-        <Skills></Skills>
         <Education></Education>
+        <Skills></Skills>
         <Experience></Experience>
         <Projects></Projects>
         <Contact></Contact>
