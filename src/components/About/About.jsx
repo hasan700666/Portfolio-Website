@@ -182,7 +182,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <hr class="h-3 ml-10 mr-10 bg-gray-200 border-0 rounded" />
+        <hr class="h-3 ml-10 mr-10 bg-white border-0 rounded" />
       </div>
     </>
   );
