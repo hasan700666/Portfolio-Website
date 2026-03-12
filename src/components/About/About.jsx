@@ -37,7 +37,7 @@ const About = () => {
           font-size: 14px;
           font-weight: 300;
           line-height: 1.7;
-          color: rgba(255,255,255,0.75);
+          color: white;
           max-width: 300px;
         }
 

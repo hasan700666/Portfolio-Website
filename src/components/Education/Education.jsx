@@ -27,63 +27,75 @@ const Education = () => {
   ];
 
   return (
-    <div className="text-white ">
-      <div>
-        <div className="flex flex-col items-center justify-center px-5 py-10">
-          <div className="flex flex-col gap-4 w-full max-w-md">
-            {educationData.map((edu, i) =>
-              edu.text ? (
-                <div>
+    <>
+      <style>{`
+      .about-body {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: white;
+        max-width: 300px;
+      }
+    `}</style>
+      <div className="text-white flex justify-center gap-26 pt-40">
+        <div className="h-133 overflow-hidden">
+          <div className="flex flex-col items-center justify-center pt-10 w-88">
+            <div className="flex flex-col gap-4 w-full max-w-md">
+              {educationData.map((edu, i) =>
+                edu.text ? (
+                  <div>
+                    <div
+                      className={`bg-white rounded-xl px-6 py-5 border transition-all duration-200 cursor-default
+              ${hovered === i ? "" : ""}`}
+                    >
+                      <p className="text-black text-[50px] font-bold mb-1 text-center ">
+                        {edu.text}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
                   <div
+                    key={i}
+                    onMouseEnter={() => setHovered(i)}
+                    onMouseLeave={() => setHovered(null)}
                     className={`bg-white rounded-xl px-6 py-5 border transition-all duration-200 cursor-default
               ${hovered === i ? "" : ""}`}
                   >
-                    <p className="text-black text-[50px] font-bold mb-1 text-center">
-                      {edu.text}
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <div
-                  key={i}
-                  onMouseEnter={() => setHovered(i)}
-                  onMouseLeave={() => setHovered(null)}
-                  className={`bg-white rounded-xl px-6 py-5 border transition-all duration-200 cursor-default
-              ${hovered === i ? "" : ""}`}
-                >
-                  <span className="inline-block bg-black border border-black text-white text-[11px] font-medium rounded-full px-3 py-0.5 mb-3 tracking-wide">
-                    {edu.period}
-                  </span>
-                  <p className="text-black text-[17px] font-bold mb-1">
-                    {edu.degree}
-                  </p>
-                  <p className="text-black text-sm mb-2">{edu.field}</p>
-                  <p className="text-black text-sm font-medium">
-                    {edu.institution}
-                  </p>
-                  <div className="flex justify-between items-center mt-3">
-                    <span className="text-black text-xs">{edu.location}</span>
-                    <span className="bg-black border border-black text-white text-[11px] font-medium rounded-full px-3 py-0.5">
-                      {edu.grade}
+                    <span className="inline-block bg-black border border-black text-white text-[11px] font-medium rounded-[7px] px-3 py-0.5 mb-3 tracking-wide">
+                      {edu.period}
                     </span>
+                    <p className="text-black text-[17px] font-bold mb-1">
+                      {edu.degree}
+                    </p>
+                    <p className="text-black text-sm mb-2">{edu.field}</p>
+                    <p className="text-black text-sm font-medium">
+                      {edu.institution}
+                    </p>
+                    <div className="flex justify-between items-center mt-3">
+                      <span className="text-black text-xs">{edu.location}</span>
+                      <span className="bg-black border border-black text-white text-[11px] font-medium rounded-[7px] px-3 py-0.5">
+                        {edu.grade}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ),
-            )}
+                ),
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-end gap-14">
+          <div className="text-[100px]">. education</div>
+          <div className="about-body text-end">
+            I am a Full Stack Developer passionate about building scalable,
+            user-centric web applications that combine clean, intuitive
+            interfaces with robust and reliable APIs. My focus is on creating
+            solutions that not only work efficiently but also deliver smooth and
+            engaging user experiences.
           </div>
         </div>
       </div>
-      <div>
-        <div className="text-8xl">. education</div>
-        <div>
-          I am a Full Stack Developer passionate about building scalable,
-          user-centric web applications that combine clean, intuitive interfaces
-          with robust and reliable APIs. My focus is on creating solutions that
-          not only work efficiently but also deliver smooth and engaging user
-          experiences.
-        </div>
-      </div>
-    </div>
+      <hr class="h-3 ml-10 mr-10 bg-gray-200 border-0 rounded" />
+    </>
   );
 };
 
