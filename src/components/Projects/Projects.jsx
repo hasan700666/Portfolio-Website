@@ -112,7 +112,7 @@ const Projects = () => {
               onClick={() => openModal(project)}
               className="group cursor-pointer"
             >
-              <div className="relative rounded-3xl overflow-hidden bg-white h-80 flex items-center justify-center shadow-2xl transition duration-500 group-hover:scale-105">
+              <div className="relative rounded-[11px] overflow-hidden bg-white h-80 flex items-center justify-center shadow-2xl transition duration-500 group-hover:scale-105">
 
                 <img
                   src={project.img}
@@ -145,14 +145,14 @@ const Projects = () => {
 
                 {/* HERO IMAGE */}
 
-                <div className="relative h-[320px] overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
 
                   <img
                     src={selectedProject.img}
                     className="w-full h-full object-cover opacity-50"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black"></div>
+                  <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black"></div>
 
                   <div className="absolute bottom-10 left-10">
 
