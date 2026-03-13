@@ -12,26 +12,28 @@ const projects = [
   {
     id: 1,
     title: "Finvera Dashboard",
-    icon: <LineChart className="w-16 h-16" />,
-    gradient: false,
+    icon: (
+      <img
+        src="https://i.ibb.co.com/rKXfk5KP/Screenshot-2026-03-13-190747.png"
+        alt="Screenshot 2026 03 13 190747"
+        border="0"
+      ></img>
+    ),
   },
   {
     id: 2,
     title: "Heavenly Real Estate",
-    icon: <Home className="w-16 h-16" />,
-    gradient: false,
+    icon: <img src="https://i.ibb.co.com/W4cvDf0v/Screenshot-2026-03-13-191142.png" alt="Screenshot 2026 03 13 191142" border="0"></img>,
   },
   {
     id: 3,
     title: "Cluvia Learning Platform",
-    icon: <GraduationCap className="w-16 h-16" />,
-    gradient: true,
+    icon: <img src="https://i.ibb.co.com/202Ymzp1/Screenshot-2026-03-13-191442.png" alt="Screenshot 2026 03 13 191442" border="0"></img>,
   },
   {
     id: 4,
     title: "Trusten M-Banking",
-    icon: <CreditCard className="w-16 h-16" />,
-    gradient: false,
+    icon: <img src="https://i.ibb.co.com/LdtV8JwQ/Screenshot-2026-03-13-191655.png" alt="Screenshot 2026 03 13 191655" border="0"></img>,
   },
 ];
 
@@ -47,16 +49,11 @@ const Projects = () => {
             {projects.map((project) => (
               <div key={project.id} className="group cursor-pointer">
                 <div
-                  className={`relative rounded-3xl overflow-hidden transition-all duration-500 ${
-                    project.gradient
-                      ? "bg-gradient-to-br from-white to-gray-300 hover:from-gray-100 hover:to-gray-400"
-                      : "bg-gradient-to-br from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700"
-                  } p-8 h-80 flex items-center justify-center shadow-2xl group-hover:shadow-white/20 group-hover:scale-105 transition-transform duration-300`}
+                  className={`relative rounded-3xl overflow-hidden transition-transform duration-500 bg-white p-8 h-80 flex items-center justify-center shadow-2xl group-hover:shadow-white/20 group-hover:scale-105 transition-transform duration-300`}
                 >
                   <div
-                    className={`transform transition-all duration-300 group-hover:scale-110 ${
-                      project.gradient ? "text-black" : "text-white"
-                    }`}
+                    className={`transform transition-all duration-300 group-hover:scale-110
+                    `}
                   >
                     {project.icon}
                   </div>
