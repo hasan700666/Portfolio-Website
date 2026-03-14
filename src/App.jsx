@@ -13,8 +13,10 @@ function App() {
   return (
     <div className="anton-regular">
       <Navbar></Navbar>
-      <Home></Home>
-      <div className="bg-black">
+      <div>
+        <Home></Home>
+      </div>
+      <div className="bg-black rounded-b-[14px]">
         <About></About>
         <Education></Education>
         <Skills></Skills>
