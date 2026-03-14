@@ -111,7 +111,7 @@ const Projects = () => {
                 onClick={() => openModal(project)}
                 className="group cursor-pointer"
               >
-                <div className="relative rounded-[11px] overflow-hidden bg-white h-80 flex items-center justify-center shadow-2xl transition duration-500 group-hover:scale-105">
+                <div className="relative rounded-[11px] overflow-hidden bg-white h-90 flex items-center justify-center shadow-2xl transition duration-500 group-hover:scale-105">
                   <img src={project.img} className="h-full object-cover" />
 
                   <span className="absolute text-black text-4xl font-medium opacity-0 group-hover:opacity-100 transition">

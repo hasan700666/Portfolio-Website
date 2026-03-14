@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="text-white text-[100px] text-center">Contact</div>
 
       {/* Design Container */}
-      <div className="design-box m-10 relative">
+      <div className="design-box m-20 relative">
         <div className="rays"></div>
         <div className="ray-source"></div>
 
@@ -37,7 +37,7 @@ const Contact = () => {
         <button
           onClick={() => setOpenModal(true)}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          px-8 py-4 bg-black text-white rounded-full text-lg font-semibold
+          px-8 py-4 bg-black text-white rounded-[10px] text-lg
           hover:scale-105 transition duration-300 shadow-lg"
         >
           Get In Touch
@@ -48,7 +48,7 @@ const Contact = () => {
       {openModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50">
 
-          <div className="bg-white w-[420px] p-8 rounded-xl">
+          <div className="bg-white w-105 p-8 rounded-xl">
 
             <h2 className="text-2xl font-bold mb-6 text-center">Contact Me</h2>
 
