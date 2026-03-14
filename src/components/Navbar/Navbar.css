@@ -13,7 +13,7 @@
   border-radius: 10px; /* Fully rounded pill shape */
   gap: 4px; /* Space between navigation items */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  margin: 25px;
+  margin: 5px;
   padding: 6px;
   display: flex;
   justify-content: center;

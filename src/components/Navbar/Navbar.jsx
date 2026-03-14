@@ -121,30 +121,34 @@ const Navbar = () => {
   return (
     <div className="my-30">
       <div className="navbar">
-        <nav className="floating-navbar">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab.name;
+        <div className="bg-white rounded-[10px]">
+          <nav className="floating-navbar">
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab.name;
 
-            return (
-              <button
-                key={tab.name}
-                className={`nav-item ${isActive ? "active" : ""}`}
-                onClick={() => setActiveTab(tab.name)}
-                aria-pressed={isActive}
-              >
-                {/* 
+              return (
+                <button
+                  key={tab.name}
+                  className={`nav-item ${isActive ? "active" : ""}`}
+                  onClick={() => setActiveTab(tab.name)}
+                  aria-pressed={isActive}
+                >
+                  {/* 
               To achieve smooth animation, we ALWAYS render the icon into the DOM.
               We use CSS on the .icon-wrapper to animate its width and opacity 
               from 0 to its full size when isActive becomes true.
             */}
-                <span className={`icon-wrapper ${isActive ? "show-icon" : ""}`}>
-                  {tab.icon}
-                </span>
-                <span className="nav-text">{tab.name}</span>
-              </button>
-            );
-          })}
-        </nav>
+                  <span
+                    className={`icon-wrapper ${isActive ? "show-icon" : ""}`}
+                  >
+                    {tab.icon}
+                  </span>
+                  <span className="nav-text">{tab.name}</span>
+                </button>
+              );
+            })}
+          </nav>
+        </div>
       </div>
     </div>
   );
