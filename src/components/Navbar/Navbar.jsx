@@ -119,7 +119,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="my-30">
+    <div className="my-25">
       <div className="navbar">
         <div className="bg-white rounded-[10px]">
           <nav className="floating-navbar">
