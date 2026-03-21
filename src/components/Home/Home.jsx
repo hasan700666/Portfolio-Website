@@ -36,7 +36,12 @@ const Home = () => {
             <span className="home-icon-wrapper">
               <RiFilePaper2Line />
             </span>
-            <span className="home-button-text">Download Resume</span>
+            <a
+              href="/public/Resume~Mohammod Hasan Al Muttaki~Full-Stack Web Developer (1).pdf"
+              download="Resume~Mohammod Hasan Al Muttaki~Full-Stack Web Developer.pdf"
+            >
+              <span className="home-button-text">Download Resume</span>
+            </a>
           </button>
           <div className="social-buttons ml-3.5">
             <button className="home-button">
