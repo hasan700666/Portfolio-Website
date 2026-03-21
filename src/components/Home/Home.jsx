@@ -37,7 +37,7 @@ const Home = () => {
               <RiFilePaper2Line />
             </span>
             <a
-              href="/public/Resume~Mohammod Hasan Al Muttaki~Full-Stack Web Developer (1).pdf"
+              href="/Resume-Mohammod-Hasan-Al-Muttaki-Full-Stack-Web-Developer.pdf"
               download="Resume~Mohammod Hasan Al Muttaki~Full-Stack Web Developer.pdf"
             >
               <span className="home-button-text">Download Resume</span>
