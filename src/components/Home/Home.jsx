@@ -48,19 +48,25 @@ const Home = () => {
               <span className="home-icon-wrapper">
                 <FaGithub />
               </span>
-              <span className="home-button-text">GitHub</span>
+              <a href="https://github.com/hasan700666">
+                <span className="home-button-text">GitHub</span>
+              </a>
             </button>
             <button className="home-button">
               <span className="home-icon-wrapper">
                 <FaWhatsapp />
               </span>
-              <span className="home-button-text">WhatsApp</span>
+              <a href="https://wa.me/8801729700666">
+                <span className="home-button-text">WhatsApp</span>
+              </a>
             </button>
             <button className="home-button">
               <span className="home-icon-wrapper">
                 <FaLinkedin />
               </span>
-              <span className="home-button-text">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/mohammodhasanalmuttaki/">
+                <span className="home-button-text">LinkedIn</span>
+              </a>
             </button>
           </div>
         </div>
