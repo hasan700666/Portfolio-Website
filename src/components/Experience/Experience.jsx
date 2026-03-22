@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Experience = () => {
-    return (
-        <div className='w-0 h-0'>
-            
-        </div>
-    );
+  return (
+    <section id="experience">
+      <div className="w-0 h-0"></div>
+    </section>
+  );
 };
 
 export default Experience;

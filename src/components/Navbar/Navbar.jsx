@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
 // SVG Icons for each section
@@ -37,23 +37,6 @@ const AboutIcon = () => (
   </svg>
 );
 
-const ProjectsIcon = () => (
-  <svg
-    className="nav-icon"
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-  </svg>
-);
-
 const SkillsIcon = () => (
   <svg
     className="nav-icon"
@@ -89,6 +72,42 @@ const EducationIcon = () => (
   </svg>
 );
 
+const ExperienceIcon = () => (
+  <svg
+    className="nav-icon"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+    <line x1="12" y1="12" x2="12" y2="16" />
+    <line x1="10" y1="14" x2="14" y2="14" />
+  </svg>
+);
+
+const ProjectsIcon = () => (
+  <svg
+    className="nav-icon"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="3" width="20" height="14" rx="2" />
+    <path d="M8 21h8M12 17v4" />
+  </svg>
+);
+
 const ContactIcon = () => (
   <svg
     className="nav-icon"
@@ -106,17 +125,48 @@ const ContactIcon = () => (
   </svg>
 );
 
+// id গুলো প্রতিটা section-এর id এর সাথে exact match করতে হবে
+const tabs = [
+  { name: "Home", id: "home", icon: <HomeIcon /> },
+  { name: "About", id: "about", icon: <AboutIcon /> },
+  { name: "Education", id: "education", icon: <EducationIcon /> },
+  { name: "Skills", id: "skills", icon: <SkillsIcon /> },
+  { name: "Projects", id: "projects", icon: <ProjectsIcon /> },
+  { name: "Contact", id: "contact", icon: <ContactIcon /> },
+];
+
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState("Home");
 
-  const tabs = [
-    { name: "Home", icon: <HomeIcon /> },
-    { name: "About", icon: <AboutIcon /> },
-    { name: "Skills", icon: <SkillsIcon /> },
-    { name: "Education", icon: <EducationIcon /> },
-    { name: "Projects", icon: <ProjectsIcon /> },
-    { name: "Contact", icon: <ContactIcon /> },
-  ];
+  // ── Scroll Spy: user scroll করলে active tab auto-update হবে ──
+  useEffect(() => {
+    const handleScroll = () => {
+      // 80px offset: fixed navbar-এর height account করতে
+      const scrollY = window.scrollY + 80;
+
+      for (let i = tabs.length - 1; i >= 0; i--) {
+        const section = document.getElementById(tabs[i].id);
+        if (section && section.offsetTop <= scrollY) {
+          setActiveTab(tabs[i].name);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // component mount হলে একবার run করবে
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // ── Click → smooth scroll ──────────────────────────────────────
+  const handleTabClick = (tab) => {
+    setActiveTab(tab.name);
+    const section = document.getElementById(tab.id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="my-25">
@@ -125,19 +175,13 @@ const Navbar = () => {
           <nav className="floating-navbar">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.name;
-
               return (
                 <button
                   key={tab.name}
                   className={`nav-item ${isActive ? "active" : ""}`}
-                  onClick={() => setActiveTab(tab.name)}
+                  onClick={() => handleTabClick(tab)}
                   aria-pressed={isActive}
                 >
-                  {/* 
-              To achieve smooth animation, we ALWAYS render the icon into the DOM.
-              We use CSS on the .icon-wrapper to animate its width and opacity 
-              from 0 to its full size when isActive becomes true.
-            */}
                   <span
                     className={`icon-wrapper ${isActive ? "show-icon" : ""}`}
                   >
