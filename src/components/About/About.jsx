@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <>
+    <section id="about">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500&display=swap');
 
@@ -184,7 +184,7 @@ const About = () => {
         </div>
         <hr class="h-3 ml-10 mr-10 bg-white border-0 rounded" />
       </div>
-    </>
+    </section>
   );
 };
 

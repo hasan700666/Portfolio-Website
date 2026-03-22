@@ -27,7 +27,7 @@ const Education = () => {
   ];
 
   return (
-    <>
+    <section id="education">
       <style>{`
       .about-body {
         font-size: 14px;
@@ -95,7 +95,7 @@ const Education = () => {
         </div>
       </div>
       <hr class="h-3 ml-10 mr-10 bg-white border-0 rounded" />
-    </>
+    </section>
   );
 };
 

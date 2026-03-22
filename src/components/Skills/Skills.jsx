@@ -142,7 +142,7 @@ const SkillCard = ({ skill }) => {
 
 const Skills = () => {
   return (
-    <>
+    <section id="skills">
       <section
         style={{
           background: "#000000",
@@ -204,7 +204,7 @@ const Skills = () => {
         ))}
       </section>
       <hr class="h-3 ml-10 mr-10 bg-white border-0 rounded" /> 
-    </>
+    </section>
   );
 };
 

@@ -95,7 +95,7 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <section id="projects">
       <div className="min-h-screen bg-black px-8 py-16">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-[90px] font-light text-white text-center mb-20 tracking-wide">
@@ -236,7 +236,7 @@ const Projects = () => {
         </div>
       </div>
       <hr class="h-3 ml-10 mr-10 bg-white border-0 rounded" /> 
-    </>
+    </section>
   );
 };
 
