@@ -6,52 +6,62 @@ const projects = [
     title: "Food Lover",
     type: "FULL-STACK WEB APPLICATION",
     img: "https://i.ibb.co.com/rKXfk5KP/Screenshot-2026-03-13-190747.png",
-    about: "Local Food Lovers Network is a full-stack web application designed for food enthusiasts to discover, share, and celebrate local culinary experiences. Users can post reviews with photos, explore dishes shared by others, and connect with a community of food lovers.",
-    challenges: "Designing secure authentication and real-time financial data visualization.",
-    improvements: "Planning to integrate AI-based spending insights and predictive analytics.",
+    about:
+      "Local Food Lovers Network is a full-stack web application designed for food enthusiasts to discover, share, and celebrate local culinary experiences. Users can post reviews with photos, explore dishes shared by others, and connect with a community of food lovers.",
+    challenges:
+      "Designing secure authentication and real-time financial data visualization.",
+    improvements:
+      "Planning to integrate AI-based spending insights and predictive analytics.",
     tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
     demo: "https://food-lover-7eb8f.web.app/",
-    clientCode: "#",
-    serverCode: "#",
+    clientCode: "https://github.com/hasan700666/Project-Food_Lover-client",
+    serverCode: "https://github.com/hasan700666/Project-Food_Lover-server",
   },
   {
     id: 2,
-    title: "Heavenly Real Estate",
+    title: "Mokhed",
     type: "FULL-STACK WEB APPLICATION",
     img: "https://i.ibb.co.com/W4cvDf0v/Screenshot-2026-03-13-191142.png",
-    about: "A property listing and management platform where users can browse properties and agents can manage listings.",
-    challenges: "Implementing property filtering, authentication, and role-based dashboards.",
+    about:
+      "Mokhed is a Public Infrastructure Issue Reporting System that enables citizens to report, track, and resolve public infrastructure problems efficiently. It ensures transparent communication between citizens and authorities.",
+    challenges:
+      "Implementing property filtering, authentication, and role-based dashboards.",
     improvements: "Add map integration and AI property recommendation.",
     tech: ["React", "Express", "MongoDB", "Tailwind"],
-    demo: "#",
-    clientCode: "#",
-    serverCode: "#",
+    demo: "https://mokhed-4d701.web.app/",
+    clientCode: "https://github.com/hasan700666/Project-Mokshed-client",
+    serverCode: "https://github.com/hasan700666/Project-Mokshed-server",
   },
   {
     id: 3,
-    title: "Cluvia Learning Platform",
-    type: "EDUCATION PLATFORM",
+    title: "GreenNest Live",
+    type: "FULL-STACK WEB APPLICATION",
     img: "https://i.ibb.co.com/202Ymzp1/Screenshot-2026-03-13-191442.png",
-    about: "Cluvia is an online learning platform where students can enroll in courses and track their progress.",
-    challenges: "Designing course progress tracking and secure payment integration.",
+    about:
+      "GreenNest Live is an elegant single-page web application for plant enthusiasts to explore care guides, buy plants, and book expert consultations. Users can browse indoor plants, view detailed care instructions, make purchases seamlessly, and access an interactive booking system for personalized plant care advice.",
+    challenges:
+      "Designing course progress tracking and secure payment integration.",
     improvements: "Planning to add live classes and AI tutor assistant.",
-    tech: ["React", "Node", "MongoDB", "Stripe"],
-    demo: "#",
-    clientCode: "#",
-    serverCode: "#",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    demo: "https://serene-beignet-d4b2f2.netlify.app/",
+    clientCode: "https://github.com/hasan700666/Project-Green-Nest-client",
+    serverCode: "https://github.com/hasan700666/Project-Green-Nest-server",
   },
   {
     id: 4,
-    title: "Trusten M-Banking",
+    title: "KureGori",
     type: "BANKING APPLICATION",
     img: "https://i.ibb.co.com/LdtV8JwQ/Screenshot-2026-03-13-191655.png",
-    about: "Trusten is a mobile banking dashboard allowing users to manage transactions and payments securely.",
+    about:
+      "KureGori is a mobile banking application that provides a seamless and secure platform for users to manage their financial transactions and payments.",
     challenges: "Ensuring secure transaction processing and OTP verification.",
     improvements: "Planning to add biometric login and fraud detection.",
     tech: ["React", "Firebase", "Node", "MongoDB"],
-    demo: "#",
-    clientCode: "#",
-    serverCode: "#",
+    demo: "https://hotel-management-syctem-by-mham.netlify.app/",
+    clientCode:
+      "https://github.com/hasan700666/Project-Hotel-Managment-System?tab=readme-ov-file",
+    serverCode:
+      "https://github.com/hasan700666/Project-Hotel-Managment-System-server",
   },
 ];
 
@@ -74,7 +84,11 @@ const Projects = () => {
           {/* PROJECT GRID */}
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project) => (
-              <div key={project.id} onClick={() => openModal(project)} className="group cursor-pointer">
+              <div
+                key={project.id}
+                onClick={() => openModal(project)}
+                className="group cursor-pointer"
+              >
                 <div className="relative rounded-[11px] overflow-hidden bg-white h-90 flex items-center justify-center shadow-2xl transition duration-500 group-hover:scale-105">
                   <img src={project.img} className="h-full object-cover" />
                   <span className="absolute text-black text-4xl font-medium opacity-0 group-hover:opacity-100 transition">
@@ -95,13 +109,18 @@ const Projects = () => {
                 <div>
                   {/* HERO IMAGE */}
                   <div className="relative h-80 overflow-hidden">
-                    <img src={selectedProject.img} className="w-full h-full object-cover opacity-50" />
+                    <img
+                      src={selectedProject.img}
+                      className="w-full h-full object-cover opacity-50"
+                    />
                     <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black"></div>
                     <div className="absolute bottom-10 left-10">
                       <p className="text-black bg-white p-1 px-2 rounded-[7px] text-sm tracking-widest mb-3 mr-76 text-center">
                         {selectedProject.type}
                       </p>
-                      <h2 className="text-5xl font-bold">{selectedProject.title}</h2>
+                      <h2 className="text-5xl font-bold">
+                        {selectedProject.title}
+                      </h2>
                     </div>
                   </div>
 
@@ -110,16 +129,28 @@ const Projects = () => {
                     {/* LEFT */}
                     <div className="md:col-span-2 space-y-8">
                       <div>
-                        <h3 className="text-xl font-semibold mb-3">About the Project</h3>
-                        <p className="text-gray-400 leading-relaxed">{selectedProject.about}</p>
+                        <h3 className="text-xl font-semibold mb-3">
+                          About the Project
+                        </h3>
+                        <p className="text-gray-400 leading-relaxed">
+                          {selectedProject.about}
+                        </p>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-3">Challenges</h3>
-                        <p className="text-gray-400 leading-relaxed">{selectedProject.challenges}</p>
+                        <h3 className="text-xl font-semibold mb-3">
+                          Challenges
+                        </h3>
+                        <p className="text-gray-400 leading-relaxed">
+                          {selectedProject.challenges}
+                        </p>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-3">Improvements</h3>
-                        <p className="text-gray-400 leading-relaxed">{selectedProject.improvements}</p>
+                        <h3 className="text-xl font-semibold mb-3">
+                          Improvements
+                        </h3>
+                        <p className="text-gray-400 leading-relaxed">
+                          {selectedProject.improvements}
+                        </p>
                       </div>
                     </div>
 
@@ -129,7 +160,10 @@ const Projects = () => {
                         <p className="text-gray-400 text-sm mb-4">TECH STACK</p>
                         <div className="flex flex-wrap gap-2">
                           {selectedProject.tech.map((tech, i) => (
-                            <span key={i} className="bg-white/10 px-3 py-1 text-sm rounded-full">
+                            <span
+                              key={i}
+                              className="bg-white/10 px-3 py-1 text-sm rounded-full"
+                            >
                               {tech}
                             </span>
                           ))}
@@ -150,8 +184,19 @@ const Projects = () => {
                           href={selectedProject.clientCode}
                           className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 py-3 rounded-xl transition"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            />
                           </svg>
                           Client Code
                         </a>
@@ -161,8 +206,19 @@ const Projects = () => {
                           href={selectedProject.serverCode}
                           className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 py-3 rounded-xl transition"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                            />
                           </svg>
                           Server Code
                         </a>
